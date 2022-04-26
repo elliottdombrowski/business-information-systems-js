@@ -10,6 +10,9 @@ const max = 100000;
 let latestNum = 0;
 
 const cycleLottoNumbers = () => {
+  //ENSURE MODAL IS CLOSED WHEN FIRING OFF NEW GAME
+  closeModal();
+
   //KEEP TRACK OF INTERVAL ITERATIONS
   let intervalCount = 0;
 
