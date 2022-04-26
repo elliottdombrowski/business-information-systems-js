@@ -1,14 +1,19 @@
-/* BASIC BROWSER RESET */
+/* IMPORT FROM GOOGLE FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito&display=swap');
 
+/* BASIC BROWSER RESET */
 * {
   box-sizing: border-box;
 }
 
 body {
+  position: relative;
   background: #fff;
+  height: 80vh;
   overflow: hidden;
   padding: 0;
   margin: 0;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 /* MAIN SITE STYLES  */
@@ -33,8 +38,93 @@ body {
   font-weight: 600;
 }
 
+#results-modal {
+  display: none;
+}
+
+.results-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+  height: 200px;
+  background: #f1f2f1;
+  border: 2px solid #b1ceea;
+}
+
+.results-modal div {
+  width: 50%;
+}
+
+.modal-left {
+  padding: 1rem 0 0 2rem;
+}
+
+.modal-left h3 {
+  font-size: 24px;
+}
+
+.modal-left p {
+  font-size: 20px;
+}
+
+.modal-right {
+  position: relative;
+}
+
+.modal-x {
+  position: absolute;
+  top: 1rem;
+  left: calc(100% - 2rem);
+}
+
+.modal-x div {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.x::before, .x::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+
+.x::before {
+  transform: rotate(45deg);
+}
+
+.x::after {
+  transform: rotate(-45deg);
+}
+
+.close-modal {
+  position: absolute;
+  bottom: 1rem;
+  padding: 8px 0;
+  width: 90%;
+  background: #c2c2c2;
+  border: 2px solid #c2c2c2;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 /* BUTTON HOVER STATE  */
 .lottery-btn:hover {
   background: #a6f4ff;
   border: 2px solid #83dcf5;
+}
+
+.close-modal:hover {
+  border: 2px solid #747474;
 }

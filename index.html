@@ -28,6 +28,31 @@
     </div>
   </main>
 
+  <div class="results-modal" id="results-modal">
+    <div class="modal-left">
+      <h3>This site says...</h3>
+      <p id="result"></p>
+    </div>
+
+    <div class="modal-right">
+      <div class="modal-x">
+        <div 
+          class="x" 
+          id="x"
+          onclick="closeModal()"
+        ></div>
+      </div>
+
+      <button 
+        class="close-modal" 
+        id="close-modal"
+        onclick="closeModal()"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+
   <script src="/index.js"></script>
 </body>
 </html>
