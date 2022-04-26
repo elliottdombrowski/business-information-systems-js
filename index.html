@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Information Systems JavaScript</title>
+  <link href="/styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <main class="main-wrapper">
+    <div class="header-wrapper">
+      <h1>The JavaScript Lottery</h1>
+      <h2>Click the button to draw a number.</h2>
+    </div>
+
+    <button
+      class="lottery-btn"
+      id="lotto-btn"
+      onclick="cycleLottoNumbers()"
+    >
+      Let's Play!
+    </button>
+
+    <div class="number-wrapper">
+      <p>Your Number: <span id="lotto-num"></span></p>
+      <p>* Any number in the 1 to 1000 range wins!</p>
+    </div>
+  </main>
+
+  <script src="/index.js"></script>
+</body>
+</html>
